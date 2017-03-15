@@ -140,7 +140,7 @@ function zp_favicon_url(  ) {
 }
 
 // Custom Logo
-add_action(  'wp_head', 'zp_custom_logo'  );
+//add_action(  'wp_head', 'zp_custom_logo'  );
 function zp_custom_logo(  ) {
 	if (  genesis_get_option( 'zp_logo', ZP_SETTINGS_FIELD )  ) { ?>
 		<style type="text/css">
