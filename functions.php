@@ -209,3 +209,21 @@ function zp_add_IE8_fixes(){
  */
  
 require_once (  get_stylesheet_directory(  ) . '/include/custom_functions.php'   );
+
+//========================================================================================================
+
+add_action( 'send_headers', 'ictu_discipl_set_hsts_policy' );
+/**
+ * Enables the HTTP Strict Transport Security (HSTS) header.
+ *
+ * @since 1.0.0
+ */
+function ictu_discipl_set_hsts_policy() {
+ 
+  // 2 year expiration: 63072000
+  header( 'Strict-Transport-Security: max-age=63072000; includeSubDomains; preload' );
+
+ 
+}
+
+//========================================================================================================
